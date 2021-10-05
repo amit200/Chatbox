@@ -1,0 +1,16 @@
+<div
+  *ngFor="let folder of arry"
+  [ngStyle]="{
+    background: folder.name === selectedPerson ? '#EEF2FE' : '#fff',
+    cursor: 'pointer'
+  }"
+>
+  <!-- <mat-icon mat-list-icon>{{ folder.image }}</mat-icon> -->
+  <img
+    [src]="folder.image"
+    style="height: 50px; width: 50px; border-radius: 50%; padding: 10px"
+    (click)="onSelectedChat(folder)"
+  />
+  <div mat-line></div>
+  <!-- <div mat-line>{{ folder.chat }}</div> -->
+</div>

@@ -1,0 +1,104 @@
+.sender {
+  margin: 5px;
+  padding: 3px;
+  //   border: 1px solid red;
+  border-radius: 8px;
+  float: right;
+  background: gainsboro;
+  cursor: pointer;
+}
+.img1{
+  float: right;
+  position: bottom;
+}
+
+.chat-message {
+  position: relative;
+  padding: 10px 15px;
+  margin: 10px 15px;
+  border-radius: 12.5px;
+  .chat-tail {
+    position: absolute;
+    bottom: -10px;
+  }
+}
+
+  .chat-message-right {
+    background-color: #d6d1d1;
+    text-align: right;
+    border-bottom-right-radius: 0%;
+    .chat-tail {
+      right: -6px;
+      // float: left;
+      // margin-right: -14px;
+    }
+  }
+
+  .chat-message-left {
+    border-bottom-left-radius: 0%;
+    background-color: darkseagreen;
+    .chat-tail {
+      left: -7px;
+    }
+  }
+
+.r {
+  margin: 15px;
+  padding: 5px;
+  /* border-style: solid; */
+  //   border: 2px solid red;
+  border-radius: 5px;
+  background: darkseagreen;
+}
+// input {
+//   position: absolute;
+//   bottom: 10px;
+//   float: right;
+// }
+#review {
+  position: absolute;
+  bottom: 30px;
+  border-radius: 10px;
+  height: 25px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 1ch;
+  margin: 2px;
+  display: flex;
+}
+.last {
+  display: flex;
+  position: fixed;
+  bottom: 10px;
+  float: right;
+  border-radius: 234px;
+
+}
+
+.parnt-div {
+  height: 470px;
+  overflow: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d6d1d1;
+}
+// .ng-star-inserted {
+//   transform: scaleX(-1);
+// }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

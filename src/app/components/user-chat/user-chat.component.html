@@ -1,0 +1,79 @@
+<div class="parnt-div">
+  <div class="chat" *ngFor="let chat of this.userInfo.chat">
+    <!-- <div class="sender" *ngIf="chat.mymessage">
+      {{ chat.mymessage }}
+      
+    </div> -->
+    <!-- <div class="Img1">
+
+      <img src="../../../assets/IMG1.svg">
+    </div> -->
+
+    <br />
+    <div class="chat-message" [ngClass]="{'chat-message-right': chat.status, 'chat-message-left': !chat.status}">
+      <span>
+        {{ chat.message }}
+      </span>
+
+      <div class="chat-tail">
+        <img *ngIf="chat.status" src="../../../assets/IMG1.svg" />
+        <img *ngIf="!chat.status" src="../../../assets/IMG2.svg" />
+      </div>
+    </div>
+
+    <div
+      *ngIf="chat.image"
+      style="margin-top: 25px; float: right; margin-right: 10px"
+    >
+      <img [src]="chat.image" alt="" style="height: 50px; width: 50px" />
+    </div>
+  </div>
+</div>
+<!-- <textarea
+  text
+  id="review"
+  name="w3review"
+  placeholder="type your text here"
+  rows="4"
+  cols="50"
+>
+    type your text here
+    </textarea
+> -->
+
+<div class="last">
+  <!-- <textarea matInput placeholder="Type your text here..."></textarea
+  ><mat-icon matSuffix style="border-radius: 50%">send</mat-icon>.
+  <input style="display: none" type="file" class="file-upload" /> -->
+  <input
+    class="ng-hide"
+    style="display: none"
+    id="input-file-id"
+    multiple
+    #input
+    type="file"
+    (change)="filechange($event)"
+  />
+  <button
+    style="margin: 0px 10px 0px 10px"
+    for="input-file-id"
+    (click)="input.click()"
+    style="margin: 2px"
+    class="md-button md-raised md-primary"
+  >
+    <mat-icon>attachment</mat-icon>
+  </button>
+
+  <input
+    type="text"
+    matInput
+    placeholder="Type your text here..."
+   style="width: 50%;"
+  />
+
+  <mat-icon style="margin: 7px;" matSuffix>send</mat-icon>
+
+  <!-- <label for="input-file-id" class="md-button md-raised md-primary"
+    >Choose Files</label
+  > -->
+</div>

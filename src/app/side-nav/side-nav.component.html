@@ -1,0 +1,41 @@
+<div class="example-sidenav-content">
+  <button
+    type="button"
+    *ngIf="!isToggle"
+    style="color: hsl(0, 5%, 7%)"
+    mat-button
+    (click)="showChatBox()"
+  >
+    <div>
+      <mat-icon>sms</mat-icon>
+    </div>
+  </button>
+  <div class="A" style="display: flex; align-items: center" *ngIf="isToggle">
+    <img [src]="userInfo.image" />
+    <p style="text-align: center">
+      <b>{{ userInfo.name }}</b>
+    </p>
+    <div class="close">
+      <mat-icon (click)="showChatBox()">close</mat-icon>
+    </div>
+  </div>
+</div>
+
+<mat-drawer-container *ngIf="isToggle" class="example-container">
+  <mat-drawer
+    #drawer
+    class="example-sidenav"
+    mode="side"
+    autosize
+    position="end"
+    opened
+  >
+    <mat-sidenav-container>
+      <app-inner-nav [arry]="itm"></app-inner-nav>
+    </mat-sidenav-container>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
